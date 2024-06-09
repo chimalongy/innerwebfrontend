@@ -1,0 +1,166 @@
+@import '../app.scss';
+
+
+.services {
+    background: linear-gradient(180deg, $dark-color-12, $dark-color-12);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+
+        @include mobile {
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+         }
+
+        p {
+            font-weight: 200;
+            font-size: 20px;
+            text-align: right;
+            color: $color-100;
+            @include mobile {
+                margin-left: 75px;
+             }
+        }
+
+        hr {
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid gray;
+            @include mobile {
+                width: 300px;
+             }
+        }
+    }
+
+    .titleContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mobile {
+            width: 100%;
+         }
+
+
+
+        .title {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            @include mobile {
+               flex-direction: column;
+               text-align: center;
+               gap:20px;
+             }
+
+            img {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+                @include mobile {
+                   width: 200px;
+                   height: 50px;
+                  }
+                
+            }
+
+            h1 {
+                font-size: 90px;
+                font-weight: 100;
+                color:$color-100;
+
+                b{
+                    color:$color-200;
+                }
+                @include mobile {
+                    font-size: 36px;
+                  }
+            }
+
+            button {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                background-color:$color-500;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                @include mobile {
+                    width: 150px;
+                    height: 50px;
+                    font-size: 16px;
+                   }
+
+            }
+        }
+    }
+
+    .listContainer {
+        flex: 2;
+        display: flex;
+        max-width: 85%;
+        margin: auto;
+        @include mobile {
+           flex-direction: column;
+           width: 100%;
+           gap: 10px;
+         }
+
+        .box {
+            padding: 30px;
+            border: 0.5px $color-100;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            width: calc(100% /4);
+             
+            @include mobile {
+                border:none ;
+                align-items: center;
+                padding: 10px;
+                width: 100%;
+             }
+
+            p{
+                color:$color-100;
+                @include mobile {
+                     display: none;
+                 }
+            }
+
+
+            button {
+                padding: 10px;
+                background-color: $color-500;
+                border: none;
+                cursor: pointer;
+                @include mobile {
+                    background-color: transparent ;
+                    border:1px solid $color-500;
+                    border-radius: 5px;
+                    color:$color-900;
+                    width:50%;
+                    padding: 5px;
+                 }
+            }
+
+        }
+
+      
+    }
+
+}

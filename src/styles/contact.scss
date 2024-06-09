@@ -1,0 +1,123 @@
+@import '../app.scss';
+
+.contact {
+    height: 100%;
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    @include mobile {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .textcontainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include mobile {
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+           
+        }
+
+        h1 {
+            font-size: 100px;
+            line-height: 88px;
+            color: $dark-color-11;
+
+            @include mobile {
+                font-size: 36px;
+                line-height: 80px;
+            }
+        }
+
+        .item{
+
+            h2{
+                color:$dark-color-10;
+                @include mobile {
+                   font-size: 20px;
+                  }  
+            }
+
+            @include mobile {
+              display: flex;
+              flex-direction: column;
+              gap: 5;
+            }
+
+            span {
+                font-weight: 300;
+                color:$dark-color-8
+            }
+    
+        }
+
+        
+    }
+
+    .formcontainer {
+        flex: 1;
+        position: relative;
+
+        @include mobile {
+            width: 100%;
+            padding: 50&;
+        }
+
+
+        .phoneSvg {
+            stroke: $dark-color-10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 1 px solid orange;
+            z-index: -1;
+
+        }
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input,
+            textarea {
+                padding: 20px;
+                background-color: transparent;
+                border: 1px solid $dark-color-5;
+                color: $dark-color-10;
+                border-radius: 5px;
+
+                @include mobile {
+                    padding: 10px;
+                }
+            }
+
+            button {
+                padding: 20px;
+                border: none;
+                background-color: $dark-color-9;
+                cursor: pointer;
+                font-weight: 500;
+                color:$color-100;
+
+                @include mobile {
+                    padding: 10px;
+                }
+
+            }
+        }
+    }
+}

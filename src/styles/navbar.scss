@@ -1,0 +1,39 @@
+@import '../app.scss';
+
+.navbar {
+    height: 100px;
+   
+    background-image: url(../assets/stars-bg.png);
+
+    .wrapper {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @include mobile {
+           justify-content: flex-end;
+           padding:20px;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 36px;
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: 20px;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

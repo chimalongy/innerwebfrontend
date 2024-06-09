@@ -1,0 +1,134 @@
+@import '../app.scss';
+@import "./variables.scss";
+
+.hero {
+    height: calc(100vh - 100px);
+   
+    background: linear-gradient(180deg, $color-200, $color-200);
+   
+    overflow: hidden;
+    position: relative;
+    background-image: url(../assets/stars-bg.png);
+    position: relative;
+    
+
+    .bgImage {
+         background-image: url(../assets/planet.png);
+        
+        
+        width: 1000px;
+        height: 1000px;
+        position: absolute;
+       top:100px;
+
+
+        left :calc(100% / 4);
+        background-size: cover; /* Make the background image cover the entire content area */
+        background-repeat: no-repeat; /* Ensure the background image is not repeated */
+        background-clip: content-box; /* Clip the background to the content box of the div */
+        opacity: 0.5;
+
+        @include mobile {
+            width: 100%;
+            background-size:contain; /* Make the background image cover the entire content area */
+            top: 400px;
+            left:0;
+            right: 0;
+            bottom: 0;
+        
+        }
+    }
+
+
+    .wrapper {
+        max-width: 85%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        .textContainer {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            @include mobile {
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
+
+
+
+            h1 {
+                font-size: 88px;
+                color: $dark-color-9;
+
+                @include mobile {
+                    font-size: 36px;
+                }
+            }
+
+            h2 {
+                font-size: 30px;
+                letter-spacing: 10px;
+                color: $dark-color-4;
+            }
+
+            .buttons {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    padding: 20px;
+                    border: 1px solid $dark-color-11;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: $dark-color-11;
+                    font-weight: 300;
+                }
+
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+
+
+    }
+
+    .imageContainer {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+        }
+
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 50vh;
+        bottom: -100px;
+        white-space: nowrap;
+        color: rgba($dark-color-5, 0.1);
+        width: 50%;
+        font-weight: bold;
+    }
+
+}

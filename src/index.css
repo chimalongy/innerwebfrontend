@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dashboardMenuActive{
+  @apply  bg-green-300 rounded-3xl  sm:rounded-l-3xl
+}
+.textbox{
+  @apply  bg-green-50 rounded-3xl w-[100%] block outline-none mb-5 p-4  sm:rounded-l-3xl 
+}
+
+.modalButton{
+  @apply  bg-green-300 rounded-3xl  sm:rounded-l-3xl p-5 w-[100px] active:bg-green-500 active:text-green-50
+} 
+
+
+.errorContainer{
+  @apply bg-red-400  flex items-center gap-2 p-2 mt-4 text-white rounded-3xl
+}
+
+.successContainer{
+  @apply bg-green-400  flex items-center gap-2 p-2 mt-4 text-white rounded-3xl
+}
+
+.checkbox{
+  @apply  bg-green-100 rounded-3xl w-[100%] outline-none flex items-center gap-2 text-green-800 text-sm p-4
+}
+
+.outboundDetailItem{
+  @apply flex justify-between items-center p-2 hover:bg-green-300 
+}
+
+
+
+
+
+

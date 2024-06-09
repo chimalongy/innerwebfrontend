@@ -1,0 +1,26 @@
+// styles.scss
+@import '../app.scss';
+
+.footer {
+    margin-top: -75px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: $dark-color-11;
+  color: $color-100;
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    color: $color-500;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-300;
+    }
+  }
+}

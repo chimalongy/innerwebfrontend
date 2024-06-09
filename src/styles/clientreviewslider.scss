@@ -1,0 +1,60 @@
+@import '../app.scss';
+.review-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .review-slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .review-slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    gap:100px;
+    align-items: center;
+    justify-content: center;
+
+    
+    @include mobile {
+        flex-direction: column;
+        gap:50px;
+    }
+  
+
+    .client-image-container{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            
+            // height: 250px;
+            border-radius: 50%;
+            @include mobile {
+              width: 100px;
+              height: 100px;
+          }
+          }
+
+          p{
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+          }
+    }
+   
+
+    p{
+        font-size: 30px;
+        @include mobile {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+  }
